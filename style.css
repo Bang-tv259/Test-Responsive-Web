@@ -1,0 +1,133 @@
+* {
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    background-color: rgba(0,0,0,0.05);
+}
+.main {
+    width: 1200px;
+    min-height: 100vh;
+    max-width: 100%;
+    margin: 10px auto 360px;
+    background-color: #fff;
+    padding-bottom: 20px;
+}
+.main__product {
+    display: flex;
+    padding: 10px;
+}
+.main__product-img {
+    width: 40%;
+    padding-top: 40%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+}
+.main__product-info {
+    width: 60%;
+    padding: 10px;
+}
+.column-layout{
+    display: flex;
+    margin-top: 36px;
+    padding: 12px 0;
+    background-color: #fff;
+}
+.column-layout__category{
+    width: 20%;
+    padding: 0 16px;
+}
+.column-layout-item a{
+
+    text-decoration: none;
+}
+.column-layout__container{
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.column-item{
+    padding: 0 16px;
+    width: 25%;
+    text-align: justify;
+}
+.feature-layout{
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 46px;
+    display: flex;
+    font-size: 16px;
+}
+.feature-item{
+    margin: 0 16px;
+    padding: 0 16px;
+    width: 28%;
+    text-align: justify;
+}
+.feature-item:nth-child(1)
+{
+    background-color: rgb(91, 177, 177);
+}
+.feature-item:nth-child(2) {
+    background-color: rgb(188, 127, 12);
+}
+.feature-item:nth-child(3) {
+    background-color: rgb(243, 81, 246);
+}
+/* 
+====================================================
+====================================================
+*/
+@media (max-width: 1024px)
+{
+    .main__product{
+        flex-direction:column-reverse;
+    }
+    .main .main__product-info{
+        width: 100%;       
+    }
+    .main__product-desc{
+        display: none;
+    }
+   
+}
+/* Mobile */
+/* @media (max-width: 46.1875em) */
+@media (max-width: 739px)
+{
+    .main__product-img {
+        width: 95%;
+        padding-top: 95%;
+    } 
+    .column-layout__category{
+        display: none;
+    }
+    .column-layout__container{
+        width: 100%;
+    }
+    .column-item {
+        width: 100%;  
+        text-align: center;
+        margin-bottom: 36px;
+    }
+    .feature-item{
+        width: 100%;
+        margin-bottom: 24px;
+    }
+       
+}
+/* Table */
+/* @media (min-width: 46.25em) and (max-width: 63.9375em) */
+@media (min-width: 740px) and (max-width: 1024px)
+{
+    .main__product-img{
+        width: 85%;
+        padding-top: 85%;
+    }
+    .column-item {
+        width: 33.3333%;  
+    }
+}
